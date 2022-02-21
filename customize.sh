@@ -9,4 +9,4 @@ sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-se
 sed -i 's/5.10/5.15/g' openwrt/target/linux/x86/Makefile
 
 # Change distrib description
-sed -i "s/OpenWrt /OpenWrt Git Revision $(cd openwrt && git rev-parse --short HEAD) Built by Demogorgon314 on $(date +%Y.%m.%d)/g" openwrt/package/lean/default-settings/files/zzz-default-settings
+sed -i "s/OpenWrt /Built by Demogorgon314 on $(date +%Y.%m.%d) /g" openwrt/package/lean/default-settings/files/zzz-default-settings
