@@ -74,15 +74,15 @@ jobs:
         ./scripts/feeds install -a
         ./scripts/feeds install -a
 
-    - name: Import external feeds - open
+    - name: Import external feeds - OpenClash
       working-directory: ./openwrt
       run: |
         git clone --depth 1 https://github.com/vernesong/OpenClash.git -b master package/luci-app-openclash
 
-    #- name: Import external feeds - JerryKuKu Argon
-    #  working-directory: ./openwrt
-    #  run: |
-    #    git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-jerrykuku
+    - name: Import external feeds - JerryKuKu Argon
+      working-directory: ./openwrt
+      run: |
+        git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-jerrykuku
 
     - name: Configuration Customization - Build_x86_64
       env:
